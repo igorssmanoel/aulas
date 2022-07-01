@@ -3,6 +3,10 @@
     margin:0;
 }
 
+html{
+    font-size: 16px;
+}
+
 
 .container{
     display: flex;
@@ -10,8 +14,10 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background: rgb(29, 29, 31);
 }
 
 h2{
-    color:green;
+    color:rgb(255, 255, 255);
+    font-size: 4rem;
 }
