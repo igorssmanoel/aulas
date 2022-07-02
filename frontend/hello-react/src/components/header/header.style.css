@@ -1,0 +1,47 @@
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.jcs {
+    justify-content: flex-start;
+}
+
+.aic {
+    align-items: center;
+}
+
+.ais {
+    align-items: flex-start;
+}
+
+.headerContainer {
+    width: 100%;
+    background: rgb(73, 73, 73);
+    padding: 0.2rem;
+}
+
+.item {
+    border: 1px transparent;
+    color: white;
+    border-right: 0.01rem solid rgba(154, 154, 154, 0.291);
+    height: 2rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.item>.logo {
+    height: inherit;
+    width: inherit;
+}
+
+.item:hover {
+    background: white;
+    color: rgb(73, 73, 73);
+}
