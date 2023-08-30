@@ -4,27 +4,59 @@ body {
     padding: 0;
 }
 
-.container {
-    background: rgb(223, 247, 253);
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     width: 100vw;
+    flex-direction: column;
+}
+
+.container {
+    background: rgb(114, 208, 112);
+    width: 700px;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 7px 18px 1px black;
+    padding: 1rem;
 }
 
 .card {
-    background: url("img/jaguar.jpg");
+    /*  background: url("img/jaguar.jpg"); */
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: -7px 7px 18px 1px black;
+    border-radius: 10px;
 }
 
-.card-turned {
-    background: url("img/chinchilla.jpg");
-    background-size: cover;
-    transform: rotateY(360deg);
+.card.card-turned {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
     backface-visibility: hidden;
-    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-front {}
+
+.card-back {
+    transform: rotateY(180deg);
 }
