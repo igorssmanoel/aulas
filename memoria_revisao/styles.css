@@ -1,0 +1,40 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width:100vw;
+    height:100vh;
+}
+
+#tabuleiro{
+    background:red;
+    padding:16px;
+    
+}
+
+
+.carta-virada{
+   /*  opacity: 0.5; */
+}
+.carta{
+    background:yellow;
+    padding:1rem;
+    width:100px;
+    height:100px;
+    margin:10px;
+    background-size: cover;
+}
+
+
+
+.carta-par{
+    /* background:green; */
+}
