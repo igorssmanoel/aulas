@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <style>
+            html,
+            body {
+                margin: 0;
+            }
+
+            .container {
+                width: 100%;
+                height: 100vh;
+            }
+
+            .subcontainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .box {
+                width: 50px;
+                height: 50px;
+                background: red;
+
+            }
+        </style>
+    </head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="subcontainer">
+
+        </div>
+        <button id="buttonId" onclick="changeButtonColor()">Click</button>
+
+    </div>
+
+    <script>
+        const cores = ['black', 'green', 'yellow', 'pink', 'purple', 'aqua'];
+        var index = 0;
+        function init() {
+            console.log("hello");
+            changeBackgroundColor(0);
+
+            for (let i = 0; i < cores.length; i++) {
+                createBox(i);
+            }
+
+        }
+
+        function createBox(index) {
+            let subcontainer = document.getElementsByClassName("subcontainer")[0];
+            let box = document.createElement("div");
+            box.className = "box";
+            box.style.background = cores[index];
+            box.style.border = "1px solid white";
+            box.addEventListener("click", function () { changeBackgroundColor(index) });
+
+            subcontainer.appendChild(box);
+        }
+
+        function changeButtonColor() {
+            let button = document.getElementById("buttonId");
+            button.style.background = cores[index];
+
+            index = index + 1;
+            if (index == cores.length) {
+                index = 0;
+            }
+            changeBackgroundColor(index);
+        }
+
+        function changeBackgroundColor(index) {
+            console.log("changeBackgroundColor");
+            let container = document.getElementsByClassName("container")[0];
+            container.style.background = cores[index];
+            container.style.display = "flex";
+            container.style.justifyContent = "center";
+            container.style.alignItems = "center";
+        }
+
+        init();
+
+    </script>
+</body>
+
+</html>
