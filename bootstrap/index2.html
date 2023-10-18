@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <button onclick="addUser()">Carregar usuário</button>
+    <table id="table">
+        <thead>
+
+            <tr>
+                <th >Nome</th>
+                <th>Idade</td>
+            </tr>
+        </thead>
+    </table>
+   <!--  <div>
+        <table>
+            <thead>
+
+                <tr>
+                    <th >A</th>
+                    <th>B</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+
+    <script>
+        function addUser(){
+           
+                let node = document.createElement("tr");
+                const name = "Igor";
+                const age = 30;
+                node.innerHTML =  `<td>${name}</td><td>${age}</td>`
+               
+                document.getElementById("table").appendChild(node);
+
+        }
+
+        addUser();
+    </script>
+</body>
+
+</html>

@@ -130,3 +130,12 @@ function init() {
 }
 
 init();
+
+
+
+function soma(a,b){
+    return a+b;
+}
+
+console.log(soma(3,2) == 5);
+console.log(soma(6,4) == 10);
